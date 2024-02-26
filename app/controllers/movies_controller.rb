@@ -56,4 +56,8 @@ class MoviesController < ApplicationController
 
     redirect_to("/movies", { :notice => "Movie deleted successfully."} )
   end
+
+  def new
+      render template: "movies/new"
+  end
 end
