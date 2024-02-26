@@ -60,4 +60,9 @@ class MoviesController < ApplicationController
   def new
       render template: "movies/new"
   end
+
+  def edit
+      @the_movie = Movie.where(id: params.fetch(:id)) [0]
+      render template: "movies/edit"
+  end
 end
